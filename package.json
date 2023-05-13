@@ -4,7 +4,8 @@
   "description": "SVG Logo Maker",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
