@@ -3,6 +3,7 @@ class Shape {
         this.color = color;
     }
     setColor(color) {
+        // console.log(color)
         this.color = color;
     }
 }

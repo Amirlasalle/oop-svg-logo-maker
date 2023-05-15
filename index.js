@@ -21,6 +21,12 @@ const questions = [
         type:"input",
         message:"What letters do you want for the logo?",
         name:"Text",
+        validate: function(Text){
+            if(Text.length > 3){
+                return "Please enter letters less than 3"
+            }
+            return true
+        }
     },
     {
         type:"list",
@@ -37,17 +43,17 @@ function init(){
         switch(answers.shape){
             case "Circle":
                 var myCircle = new Circle();
-                myCircle.setColor(answers.Shape_Color);
+                myCircle.setColor(answers.Shape_color);
                 generateSVG(myCircle,answers.Text,answers.Text_color);
                 break;
             case "Triangle":
                 var myTriangle = new Triangle()
-                myTriangle.setColor(answers.Shape_Color);
+                myTriangle.setColor(answers.Shape_color);
                 generateSVG(myTriangle,answers.Text,answers.Text_color);
                 break;
             case "Square":
                 var mySquare = new Square()
-                mySquare.setColor(answers.Shape_Color);
+                mySquare.setColor(answers.Shape_color);
                 generateSVG(mySquare,answers.Text,answers.Text_color);
                 break;
         }

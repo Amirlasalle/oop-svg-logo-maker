@@ -10,7 +10,7 @@ describe("Circle", function () {
     test("Testing rendering SVG element", function () {
         const expectedEl = `<svg width="300" height="300" xmlns="http://wwww.w3.org/2000/svg"><text x="150" y="125" font-size="60" text-anchor="middle" fill="white"</text></svg>`
         const TestSVG = new SVG()
-        TestSVG.setText("AJM", "white")
+        TestSVG.setText("white")
         const returnShape = TestSVG.render()
         expect(returnShape).toEqual(expectedEl)
     })
